@@ -1,2 +1,1 @@
-web: python All_Project_Files/subscriptpro_backend/app.py
-
+web: python SubscriptPro_Fixed_with_Update/All_Project_Files/subscriptpro_backend/app.py
