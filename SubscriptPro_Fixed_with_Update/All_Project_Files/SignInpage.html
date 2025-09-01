@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubscriptPro | Sign In</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #e6ccff, #f5d6f5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .signin-container {
+            display: flex;
+            max-width: 1000px;
+            width: 90%;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        /* Left panel */
+        .left-panel {
+            flex: 1;
+            background: linear-gradient(135deg, #7e3ff2, #c466ff);
+            color: #fff;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left-panel h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .left-panel p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 80%;
+        }
+
+        /* Right panel */
+        .right-panel {
+            flex: 1;
+            padding: 60px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .login-card h2 {
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .login-card input {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 18px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        .login-card input:focus {
+            border-color: #7e3ff2;
+            box-shadow: 0 0 0 3px rgba(126, 63, 242, 0.2);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background-color: #7e3ff2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #692dcc;
+        }
+
+        .separator {
+            border-bottom: 1px solid #dadde1;
+            margin: 25px 0;
+        }
+
+        .signup-link {
+            display: block;
+            margin: 10px 0;
+            font-size: 0.95rem;
+            color: #7e3ff2;
+            text-decoration: none;
+        }
+
+        .signup-link:hover {
+            text-decoration: underline;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background-color: #42b72a;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #36a420;
+        }
+
+        .error-msg {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: none;
+        }
+
+        @media (max-width: 850px) {
+            .signin-container {
+                flex-direction: column;
+            }
+            .left-panel, .right-panel {
+                padding: 40px 20px;
+                text-align: center;
+            }
+            .left-panel p {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="signin-page">
+    <div class="signin-container">
+        <!-- Left Side -->
+        <div class="left-panel">
+            <h1>SubscriptPro</h1>
+            <p>Sign in to manage and track all your subscriptions in one place.</p>
+        </div>
+
+        <!-- Right Side -->
+        <div class="right-panel">
+            <div class="login-card">
+                <h2>Sign In</h2>
+                <form id="login-form">
+                    <input type="text" id="login-email" placeholder="Email Address or Mobile Number" required>
+                    <input type="password" id="login-password" placeholder="Password" required id="password">
+                    
+                    <button type="submit" class="btn-login">Sign In</button>
+                    
+                    <!-- Error message -->
+                    <p id="login-error" class="error-msg">Invalid email or password</p>
+                    
+                    <a href="CreateAccountPage.html" class="signup-link">Don’t have an account? Create one</a>
+                    
+                    <div class="separator"></div>
+                    
+                    <a href="Landingpage.html" class="back-btn">Go back to Homepage</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Link JS -->
+<script src="JS.js"></script>
+
+</body>
+</html>

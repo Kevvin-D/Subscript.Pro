@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Page</title>
+  <link rel="stylesheet" href="Style.css">
+  <script defer src="JS.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <h2>SubscriptPro</h2>
+  </div>
+
+  <!-- Main container -->
+  <div class="container">
+    <h2>Manage Your Subscriptions</h2>
+
+    <!-- Subscription Form -->
+    <form id="subscriptionForm">
+      <input type="text" id="serviceName" placeholder="Service Name" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+
+      <label>Start Date:</label>
+      <input type="date" id="startDate" required>
+
+      <label>End Date:</label>
+      <input type="date" id="endDate" required>
+
+      <div class="checkbox-row">
+        <label>Manual Renewal</label>
+        <input type="checkbox" id="manualRenewal">
+      </div>
+
+      <div class="checkbox-row">
+        <label>Auto Renewal</label>
+        <input type="checkbox" id="autoRenewal">
+      </div>
+
+      <button type="submit" id="submitBtn">Add Subscription</button>
+    </form>
+
+    <!-- Subscription Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Amount</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Manual Renewal</th>
+          <th>Auto Renewal</th>
+          <th>Actions</th> <!-- New column for Edit/Delete -->
+        </tr>
+      </thead>
+      <tbody id="subscriptionTable"></tbody>
+    </table>
+
+    <a href="Landingpage.html" class="btn">Back to Home</a>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="Landingpage.html">Home</a>
+    <a href="Landingpage.html">Subscriptions</a>
+    <a href="#">About</a>
+    <a href="Landingpage.html#closure">Contact</a>
+  </div>
+
+  <!-- Edit Modal -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span id="editModalClose" class="modal-close">&times;</span>
+      <h3>Edit Subscription</h3>
+      <form id="editSubscriptionForm">
+        <div class="form-group">
+          <label for="editServiceName">Service Name</label>
+          <input type="text" id="editServiceName" required>
+        </div>
+        <div class="form-group">
+          <label for="editAmount">Amount</label>
+          <input type="number" step="0.01" id="editAmount" required>
+        </div>
+        <div class="form-group">
+          <label for="editStartDate">Start Date</label>
+          <input type="date" id="editStartDate" required>
+        </div>
+        <div class="form-group">
+          <label for="editEndDate">End Date</label>
+          <input type="date" id="editEndDate" required>
+        </div>
+        <div class="form-group checkbox-row">
+          <label><input type="checkbox" id="editManualRenewal"> Manual Renewal</label>
+          <label><input type="checkbox" id="editAutoRenewal"> Auto Renewal</label>
+        </div>
+        <button type="submit" class="btn">Save Changes</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
